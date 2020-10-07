@@ -1,0 +1,50 @@
+nodejs 다운, 설치(mpn 같이 설치)
+> node -v
+> npm -v
+
+npx 설치
+> npm install npx -g (in cmd)
+
+create react app
+> npx create-react-app folder_name (in cmd)
+
+VSC terminal에서 git push
+> git init => Reinitialized existing Git repository in /root...
+> git remote add origin http://github.com/...
+> git add .
+> git commit -m "message..."
+> git push
+
+start
+> npm start (in cmd target folder)
+> Local / On your Network 주소 두개 나옴(와이파이를 통한 외부 접속)
+
+React 동작 설명 자막
+react가 무엇이냐면, react는 당신이 거기에 쓰는 모든 요소를 생성한다는 것이야.
+자바스크립트와 함께 그것들을 만들고, 그것들을 HTML로 밀어 넣어.
+알겠지? 왜 여기서 HTML이 보이지 않는지 알겠지?
+React는 이곳에 element를 넣는 역할을 담당해
+너의 모든 react application을 div 사이에 넣어! 알겠지?
+믿지 못하겠다면 index.js를 봐바
+그러면 ReactDOM render라고 하는 부분을 보게 될 거야
+이 녀석은 application을 render하려고 하는데
+이 부분(import App from './App')을 말이야.
+여기서 document.getElementById('root')는
+여기에 있어(index.html) 만약 내가 이걸 potato로 바꾸고
+view를 refresh하면 error가 생겨. 왜냐면 getElementById('root')가 존재하지 않기 때문이야.
+react는 app.js component를 ElementById 내부에 넣으려고 해. 하지만 존재하지 않지!
+index.html의 root를 potato로 바꾸고 refresh하면 정상 동작하지.
+맞지? 이게 react.js가 동작하는 방법이야.
+네가 이 페이지의 소스코드를 보면 너는 어디에서도 Hello를 보지 못할거야.
+소스코드에서 우리가 보는 것은 기본적으로 빈 index.js 파일이야.
+hello가 없는 빈 index.html 파일. 이게 바로 react를 빠르게 하는 이유야.
+react는 소스코드에 처음부터 HTML을 넣지 않고, HTML에서 HTML을 추가하거나 제거하는 법을 알고 있어.
+그래서 application이 이것을 로드할 때, 빈 HTML을 로드하게 되고,
+그런 다음에 react가 HTML을 밀어넣게 돼. 너의 component에 작성해뒀던 것들 말야.
+이 경우에는 예를 들어 potatio div에 넣을거야 알겠지?
+이게 react가 동작하는 방식이야, virtual DOM이라는게 있어 virtual document object model,
+virtual! 존재하지 않는다는 말이야. 보다시피 소스코드에는 존재하지 않아.
+react가 그걸 만들어내는 거야. 그래서 내가 hello 내부에 h1을 추가하면
+react는 그걸 만들고 내가 이야기했듯 hello는 보이지 않을거야.
+알겠지? 이게 바로 react의 일이야! 이것이 react가 빠른 이유야. 왜냐면 virtual이고 존재하지 않거든.
+이게 우리가 application에서 할 일이야. 우리는 모든 것을 정리했어! 왜냐면 우리는 천천히 하나씩 추가하면서 시작할거라서.
